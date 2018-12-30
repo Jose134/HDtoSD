@@ -1,0 +1,6 @@
+c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\bin\Release\HDtoSD.exe.config
+c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\bin\Release\HDtoSD.exe
+c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\bin\Release\HDtoSD.pdb
+c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\obj\Release\HDtoSD.exe
+c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\obj\Release\HDtoSD.pdb
+C:\Users\Usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\obj\Release\HDtoSD.csprojResolveAssemblyReference.cache
