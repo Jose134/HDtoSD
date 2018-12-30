@@ -2,4 +2,4 @@
 osu! hd skin to sd converter
 
 Download:
-  (bin/Release/HDtoSD.exe)
+  https://github.com/user/repository/raw/master/bin/Release/HDtoSD.exe
