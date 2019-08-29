@@ -4,3 +4,10 @@ c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\bin\Release
 c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\obj\Release\HDtoSD.exe
 c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\obj\Release\HDtoSD.pdb
 C:\Users\Usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\obj\Release\HDtoSD.csprojResolveAssemblyReference.cache
+C:\Users\Jose134\source\repos\HDtoSD\bin\Release\HDtoSD.exe.config
+C:\Users\Jose134\source\repos\HDtoSD\bin\Release\HDtoSD.exe
+C:\Users\Jose134\source\repos\HDtoSD\bin\Release\HDtoSD.pdb
+C:\Users\Jose134\source\repos\HDtoSD\obj\Release\HDtoSD.csprojAssemblyReference.cache
+C:\Users\Jose134\source\repos\HDtoSD\obj\Release\HDtoSD.csproj.CoreCompileInputs.cache
+C:\Users\Jose134\source\repos\HDtoSD\obj\Release\HDtoSD.exe
+C:\Users\Jose134\source\repos\HDtoSD\obj\Release\HDtoSD.pdb

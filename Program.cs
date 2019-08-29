@@ -188,6 +188,11 @@ namespace HDtoSD
                     }
 
                 }
+                else
+                {
+                    //If the image is a 1x1 it will just do a copy for the SD version
+                    srcImage.Save(outputFile);
+                }
             }
         }
 
