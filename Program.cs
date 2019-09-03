@@ -37,7 +37,9 @@ namespace HDtoSD
                         if (!bool.TryParse(args[i+1], out replace))
                         {
                             //Error handling
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("ERROR: Couldn't set replace parameter, using default option");
+                            Console.ForegroundColor = ConsoleColor.White;
                             replace = false;
                         }
                         i++;
@@ -58,7 +60,9 @@ namespace HDtoSD
                     else
                     {
                         //Error handling
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("ERROR: Unkown parameter " + args[i]);
+                        Console.ForegroundColor = ConsoleColor.White;
                         return;
                     }
                 }
