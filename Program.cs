@@ -11,18 +11,18 @@ namespace HDtoSD
 {
     class Program
     {
-        //Default replacing variable
-        private const bool DEFAULT_REPLACING = false;
+        //Program arguments
+        private static bool replace = false;
+        private static bool copyEmpty = false;
 
         //File search filters for file extensions
         private static string[] filters = new string[] { "jpg", "png" };
 
-        //Rainbow mode variables
+        //Rainbow mode variable
         private static bool coloring = false;
 
         static void Main(string[] args)
         {
-            bool replace = DEFAULT_REPLACING;
             ConsoleColor startColor = Console.ForegroundColor;
 
             //Handles arguments
@@ -38,13 +38,17 @@ namespace HDtoSD
                         {
                             //Error handling
                             Console.WriteLine("ERROR: Couldn't set replace parameter, using default option");
-                            replace = DEFAULT_REPLACING;
+                            replace = false;
                         }
                         i++;
                     }
                     else if (args[i] == "-c" || args[i] == "--color")
                     {
                         coloring = true;
+                    }
+                    else if (args[i] == "-cp" || args[i] == "--copy")
+                    {
+                        copyEmpty = true;
                     }
                     else if (args[i] == "-h" || args[i] == "--help")
                     {
@@ -70,6 +74,7 @@ namespace HDtoSD
             //Displays information
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Replacing: " + replace);
+            Console.WriteLine("Copy empty images: " + copyEmpty);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(files.Length + " files will be generated");
             Console.WriteLine("\nPress C to cancel or any other key to continue");
@@ -190,8 +195,18 @@ namespace HDtoSD
                 }
                 else
                 {
-                    //If the image is a 1x1 it will just do a copy for the SD version
-                    srcImage.Save(outputFile);
+                    //If the image is a 1x1 it will create a SD version
+
+                    if (copyEmpty)
+                    {
+                        //Creates a copy of the file with sd naming
+                        srcImage.Save(outputFile);
+                    }
+                    else
+                    {
+                        //Renames the @2x empty image to sd naming
+                        File.Move(inputPath, outputFile);
+                    }
                 }
             }
         }
@@ -204,6 +219,7 @@ namespace HDtoSD
             Console.WriteLine("Usage: HDtoSD.exe [parameters]");
             Console.WriteLine("\n\n\nOptional parameters:");
             Console.WriteLine("-r   --replace + true/false     If set to true the already existing SD images will be overwritten");
+            Console.WriteLine("-cp  --copy                     Copies the empty images (1x1 pixel size) instead of renaming them");
             Console.WriteLine("-c   --color                    Activates rainbow mode (just for fun)");
             Console.WriteLine("-h   --help                     Displays help information");
             Console.WriteLine("\n\n-----------------------------------------");
