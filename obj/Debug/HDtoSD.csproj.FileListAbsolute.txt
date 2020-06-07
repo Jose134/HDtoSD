@@ -7,3 +7,9 @@ c:\users\usuario\documents\visual studio 2015\Projects\HDtoSD\HDtoSD\obj\Debug\H
 C:\Users\Usuario\Documents\visual studio 2015\Projects\HDtoSD\Git\HDtoSD\bin\Debug\HDtoSD.exe.config
 C:\Users\Usuario\Documents\visual studio 2015\Projects\HDtoSD\Git\HDtoSD\obj\Debug\HDtoSD.exe
 C:\Users\Usuario\Documents\visual studio 2015\Projects\HDtoSD\Git\HDtoSD\obj\Debug\HDtoSD.pdb
+D:\Projects\HDtoSD\bin\Debug\HDtoSD.exe.config
+D:\Projects\HDtoSD\bin\Debug\HDtoSD.exe
+D:\Projects\HDtoSD\bin\Debug\HDtoSD.pdb
+D:\Projects\HDtoSD\obj\Debug\HDtoSD.csprojAssemblyReference.cache
+D:\Projects\HDtoSD\obj\Debug\HDtoSD.exe
+D:\Projects\HDtoSD\obj\Debug\HDtoSD.pdb

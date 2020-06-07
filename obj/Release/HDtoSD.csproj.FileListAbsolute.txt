@@ -11,3 +11,9 @@ C:\Users\Jose134\source\repos\HDtoSD\obj\Release\HDtoSD.csprojAssemblyReference.
 C:\Users\Jose134\source\repos\HDtoSD\obj\Release\HDtoSD.csproj.CoreCompileInputs.cache
 C:\Users\Jose134\source\repos\HDtoSD\obj\Release\HDtoSD.exe
 C:\Users\Jose134\source\repos\HDtoSD\obj\Release\HDtoSD.pdb
+D:\Projects\HDtoSD\bin\Release\HDtoSD.exe.config
+D:\Projects\HDtoSD\bin\Release\HDtoSD.exe
+D:\Projects\HDtoSD\bin\Release\HDtoSD.pdb
+D:\Projects\HDtoSD\obj\Release\HDtoSD.csprojAssemblyReference.cache
+D:\Projects\HDtoSD\obj\Release\HDtoSD.exe
+D:\Projects\HDtoSD\obj\Release\HDtoSD.pdb

@@ -69,8 +69,7 @@ namespace HDtoSD
             }
 
             //Gets the path where the executable file is
-            var path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
-            path = path.Substring(6) + @"\";
+            var path = Directory.GetCurrentDirectory();
 
             //Gets all the files that we have to convert
             var files = GetFilesFrom(path, filters, replace);
@@ -80,7 +79,7 @@ namespace HDtoSD
             Console.WriteLine("Replacing: " + replace);
             Console.WriteLine("Copy empty images: " + copyEmpty);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(files.Length + " files will be generated");
+            Console.WriteLine(files.Count + " files will be generated");
             Console.WriteLine("\nPress C to cancel or any other key to continue");
 
             //Checks user input
@@ -117,7 +116,7 @@ namespace HDtoSD
         }
 
         //Returns an array containing the HD image files in the skin folder
-        private static string[] GetFilesFrom(string searchFolder, string[] filters, bool replace)
+        private static List<string> GetFilesFrom(string searchFolder, string[] filters, bool replace)
         {
             //Get all files in the folder
             List<string> filesFound = new List<string>();
@@ -153,7 +152,7 @@ namespace HDtoSD
             }
 
             //Returns the hdFiles list in array form
-            return hdFiles.ToArray();
+            return hdFiles;
         }
 
         //Checks if a given file is contained in a given list
@@ -174,6 +173,8 @@ namespace HDtoSD
         //Resizes a image given its path
         private static void Resize (string inputPath, string outputFile, float scale)
         {
+            bool moveFlag = false;
+
             using (var srcImage = Image.FromFile(inputPath))
             {
                 //Checks if the image will have a valid resolution after resizing
@@ -208,10 +209,16 @@ namespace HDtoSD
                     }
                     else
                     {
-                        //Renames the @2x empty image to sd naming
-                        File.Move(inputPath, outputFile);
+                        //Activates the move flag for renaming the file
+                        moveFlag = true;
                     }
                 }
+            }
+
+            if (moveFlag)
+            {
+                //Renames the @2x empty image to sd naming
+                File.Move(inputPath, outputFile);
             }
         }
 
