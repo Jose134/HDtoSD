@@ -253,6 +253,7 @@ namespace HDtoSD
             Console.WriteLine("-r   --replace + true/false     If set to true the already existing SD images will be overwritten");
             Console.WriteLine("-cp  --copy                     Copies the empty images (1x1 pixel size) instead of renaming them");
             Console.WriteLine("-c   --color                    Activates rainbow mode (just for fun)");
+            Console.WriteLine("-s   --subdirs + true/false     Enables/Disables searching for files in subdirectories");
             Console.WriteLine("-h   --help                     Displays help information");
             Console.WriteLine("\n\n-----------------------------------------");
         }
