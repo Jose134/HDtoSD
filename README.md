@@ -6,4 +6,4 @@ This program will convert all the "@2x" files in your skin folder to SD resoluti
 ###### NOTE:
 The program must be located in the skin folder since it searchs for images in the same directory as the .exe file is
 
-[Download](https://github.com/Jose134/HDtoSD/raw/master/bin/Release/HDtoSD.exe)
+[Download](https://github.com/Jose134/HDtoSD/releases/latest)
