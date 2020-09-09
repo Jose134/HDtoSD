@@ -13,3 +13,4 @@ D:\Projects\HDtoSD\bin\Debug\HDtoSD.pdb
 D:\Projects\HDtoSD\obj\Debug\HDtoSD.csprojAssemblyReference.cache
 D:\Projects\HDtoSD\obj\Debug\HDtoSD.exe
 D:\Projects\HDtoSD\obj\Debug\HDtoSD.pdb
+D:\Projects\HDtoSD\obj\Debug\HDtoSD.csproj.CoreCompileInputs.cache

@@ -15,6 +15,9 @@ namespace HDtoSD
         private static bool replace = false;
         private static bool copyEmpty = false;
 
+        private static bool askSubdirs = true;
+        private static bool subdirs = false;
+
         //File search filters for file extensions
         private static string[] filters = new string[] { "jpg", "png" };
 
@@ -52,6 +55,12 @@ namespace HDtoSD
                     {
                         copyEmpty = true;
                     }
+                    else if (args[i] == "-s" || args[i] == "--subdirs")
+                    {
+                        askSubdirs = false;
+                        i++;
+                        subdirs = bool.Parse(args[i]);
+                    }
                     else if (args[i] == "-h" || args[i] == "--help")
                     {
                         DisplayHelp();
@@ -71,8 +80,20 @@ namespace HDtoSD
             //Gets the path where the executable file is
             var path = Directory.GetCurrentDirectory();
 
+            if (askSubdirs)
+            {
+                Console.Write("Search files inside subdirectories? (Y/N): ");
+                string ans = Console.ReadLine();
+                ans = ans.ToLower();
+                if (ans == "y" || ans == "yes")
+                {
+                    subdirs = true;
+                }
+                Console.Clear();
+            }
+
             //Gets all the files that we have to convert
-            var files = GetFilesFrom(path, filters, replace);
+            var files = GetFilesFrom(path, filters, replace, subdirs);
             
             //Displays information
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -116,11 +137,11 @@ namespace HDtoSD
         }
 
         //Returns an array containing the HD image files in the skin folder
-        private static List<string> GetFilesFrom(string searchFolder, string[] filters, bool replace)
+        private static List<string> GetFilesFrom(string searchFolder, string[] filters, bool replace, bool subdirs)
         {
             //Get all files in the folder
             List<string> filesFound = new List<string>();
-            var searchOption = SearchOption.TopDirectoryOnly;
+            var searchOption = subdirs ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
             foreach (var filter in filters)
             {
                 filesFound.AddRange(Directory.GetFiles(searchFolder, string.Format("*.{0}", filter), searchOption));
